@@ -34,4 +34,17 @@ export default buildConfig({
     payloadCloudPlugin(),
     // storage-adapter-placeholder
   ],
+  jobs: {
+    tasks: [
+      {
+        slug: 'example',
+        handler: async () => {
+          console.log('Example task ran')
+          return {
+            output: {},
+          }
+        },
+      },
+    ]
+  }
 })
